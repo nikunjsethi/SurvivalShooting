@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Player")]
-    public int playerSpeed;
-    public Vector2 mouseTurn;
-    Rigidbody rb;
-    // Start is called before the first frame update
-    void Start()
+    [Header("Audios")]
+    public AudioSource footstepSounds;
+    public AudioSource shootingSounds;
+    public AudioClip[] shootingClips;
+    private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        mouseTurn.x += Input.GetAxis("Mouse X");
-        mouseTurn.y += Input.GetAxis("Mouse Y");
-        //transform.localRotation = Quaternion.Euler(-mouseTurn.y, mouseTurn.x, 0);
-        rb.rotation= Quaternion.Euler(-mouseTurn.y, mouseTurn.x, 0);
-        float hMov = Input.GetAxis("Horizontal");
-        float vMov = Input.GetAxis("Vertical");
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            footstepSounds.enabled = true;
+            Debug.Log("Play");
+        }
+        else
+        {
+            footstepSounds.enabled = false;
+        }
+    }
 
-        rb.velocity = new Vector3(hMov * playerSpeed, 0, vMov * playerSpeed);
+    public void PlayerShooting(int _clip)
+    {
+        shootingSounds.clip = shootingClips[_clip];
+        shootingSounds.Play();
     }
 }
