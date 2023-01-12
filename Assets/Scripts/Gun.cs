@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
 {
     public float damage = 10f;
     public float range = 100f;
-    public CinemachineVirtualCamera cam;
+    public GameObject cam;
     public ParticleSystem muzzleFlash;
 
     [Header("Scripts")]
