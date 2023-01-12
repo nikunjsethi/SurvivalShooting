@@ -41,6 +41,10 @@ public class Gun : MonoBehaviour
                 hit.transform.gameObject.GetComponent<EnemyMovement>().hitCount++;
                 Debug.Log(hit.transform.gameObject.name);
             }
+            else
+            {
+                Debug.Log(hit.transform.gameObject.name);
+            }
         }
     }
 }
