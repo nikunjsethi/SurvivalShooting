@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private NavMeshAgent enemy;
     public Transform player;
     public Animator zombie;
+    public ParticleSystem bloodEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +25,13 @@ public class EnemyMovement : MonoBehaviour
         {
             zombie.SetBool("walk", true);
             zombie.SetBool("run", false);
-            Debug.Log("Its fucking far");
+            //Debug.Log("Its fucking far");
         }
         else
         {
             zombie.SetBool("walk", false);
             zombie.SetBool("run", true);
-            Debug.Log("Its fucking close");
+            //Debug.Log("Its fucking close");
         }
     }
 }

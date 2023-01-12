@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
 
     [Header("Scripts")]
     public PlayerMovement playerMovement;
+    public EnemyMovement enemyMovement;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +35,11 @@ public class Gun : MonoBehaviour
         muzzleFlash.Play();
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.gameObject.name);
+            if (hit.transform.gameObject.CompareTag("Enemy"))
+            {
+                enemyMovement.bloodEffect.Play();
+                Debug.Log(hit.transform.gameObject.name);
+            }
         }
     }
 }
