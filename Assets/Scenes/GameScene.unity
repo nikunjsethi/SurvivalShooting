@@ -318,10 +318,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1091,7 +1091,7 @@ PrefabInstance:
     - target: {fileID: 3821124402599194109, guid: 172a9681732a285409a55b415b2f75ef,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4489117730899769159, guid: 172a9681732a285409a55b415b2f75ef,
         type: 3}
@@ -1220,7 +1220,7 @@ PrefabInstance:
     - target: {fileID: 1731641353397030038, guid: 97d58cc43dd42a546bd5e987cf785e14,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97d58cc43dd42a546bd5e987cf785e14, type: 3}
@@ -1311,7 +1311,7 @@ PrefabInstance:
     - target: {fileID: 7791043119033979983, guid: 0f1b15161ff3019439c84857a105a2ce,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f1b15161ff3019439c84857a105a2ce, type: 3}
@@ -1417,7 +1417,7 @@ PrefabInstance:
     - target: {fileID: 5740723343336664901, guid: 637fb23ca8317ad4093e15e46e74a7d4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637fb23ca8317ad4093e15e46e74a7d4, type: 3}
@@ -2075,6 +2075,11 @@ PrefabInstance:
     - target: {fileID: 1464796209124512051, guid: e9d56e4fb4032704c861c1f6944de05f,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238545323452226698, guid: e9d56e4fb4032704c861c1f6944de05f,
+        type: 3}
+      propertyPath: m_StoppingDistance
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2242740699743439753, guid: e9d56e4fb4032704c861c1f6944de05f,

@@ -42,10 +42,20 @@ public class EnemyMovement : MonoBehaviour
                 zombie.SetBool("run", false);
                 zombie.SetBool("injured", true);
             }
+
+            if(Vector3.Distance(player.position, gameObject.transform.position) <= 1)
+            {
+                zombie.SetBool("run", false);
+                zombie.SetBool("injured", false);
+                zombie.SetBool("attack", true);
+            }
+            else
+            {
+                zombie.SetBool("attack", false);
+            }
         }
         if (hitCount > 7)
         {
-            Debug.Log("Died");
             zombie.SetBool("walk", false);
             zombie.SetBool("run", false);
             zombie.SetBool("injured", false);
@@ -53,7 +63,7 @@ public class EnemyMovement : MonoBehaviour
             enemyNav.enabled = false;
             isAlive = false;
             StartCoroutine(Disappear());
-            this.enabled = false;   
+            this.enabled = false;                           //this line will stop the update function
         }
     }
 
