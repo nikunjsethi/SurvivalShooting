@@ -37,7 +37,8 @@ public class Gun : MonoBehaviour
         {
             if (hit.transform.gameObject.CompareTag("Enemy"))
             {
-                enemyMovement.bloodEffect.Play();
+                hit.transform.gameObject.GetComponent<EnemyMovement>().bloodEffect.Play();
+                hit.transform.gameObject.GetComponent<EnemyMovement>().hitCount++;
                 Debug.Log(hit.transform.gameObject.name);
             }
         }
