@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  zombie: {fileID: 2238545323452226693}
 --- !u!195 &2238545323452226698
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -433,7 +434,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &1655925313122698519
 GameObject:
   m_ObjectHideFlags: 0

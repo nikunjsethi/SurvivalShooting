@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private NavMeshAgent enemy;
     public Transform player;
+    public Animator zombie;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +19,18 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(player.position);
+
+        if(Vector3.Distance(player.position,gameObject.transform.position)>5)
+        {
+            zombie.SetBool("walk", true);
+            zombie.SetBool("run", false);
+            Debug.Log("Its fucking far");
+        }
+        else
+        {
+            zombie.SetBool("walk", false);
+            zombie.SetBool("run", true);
+            Debug.Log("Its fucking close");
+        }
     }
 }
