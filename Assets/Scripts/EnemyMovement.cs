@@ -67,8 +67,8 @@ public class EnemyMovement : MonoBehaviour
             zombie.SetBool("die", true);
             enemyNav.enabled = false;
             isAlive = false;
-            //_EnemyAudioSource.clip = _enemyClips[0];
-            //_EnemyAudioSource.Play();
+            _EnemyAudioSource.clip = _enemyClips[2];
+            _EnemyAudioSource.Play();
             StartCoroutine(Disappear());
             this.enabled = false;                           //this line will stop the update function
         }

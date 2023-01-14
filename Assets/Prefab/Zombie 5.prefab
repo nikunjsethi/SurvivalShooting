@@ -1607,6 +1607,8 @@ MonoBehaviour:
   _EnemyAudioSource: {fileID: 1973683855}
   _enemyClips:
   - {fileID: 8300000, guid: b628a54993cba33409a8c454484355f3, type: 3}
+  - {fileID: 8300000, guid: b628a54993cba33409a8c454484355f3, type: 3}
+  - {fileID: 8300000, guid: 5119d9b07a934244bbba4d18a61b7a6c, type: 3}
   hitCount: 0
 --- !u!195 &7791043119033980080
 NavMeshAgent:
