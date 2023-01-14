@@ -9,6 +9,9 @@ public class EnemyMovement : MonoBehaviour
     public Transform player;
     public Animator zombie;
     public ParticleSystem bloodEffect;
+    [Header("Audios")]
+    public AudioSource _EnemyAudioSource;
+    public AudioClip[] _enemyClips;
     public int hitCount;
     bool isAlive=true;
     // Start is called before the first frame update
@@ -29,6 +32,8 @@ public class EnemyMovement : MonoBehaviour
             {
                 zombie.SetBool("walk", true);
                 zombie.SetBool("run", false);
+                _EnemyAudioSource.clip = _enemyClips[0];
+                _EnemyAudioSource.Play();
             }
             else
             {
@@ -62,6 +67,8 @@ public class EnemyMovement : MonoBehaviour
             zombie.SetBool("die", true);
             enemyNav.enabled = false;
             isAlive = false;
+            //_EnemyAudioSource.clip = _enemyClips[0];
+            //_EnemyAudioSource.Play();
             StartCoroutine(Disappear());
             this.enabled = false;                           //this line will stop the update function
         }

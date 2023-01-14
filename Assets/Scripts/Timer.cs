@@ -20,7 +20,6 @@ public class Timer : MonoBehaviour
         if (timer >= 0)
         {
             timer -= Time.deltaTime;
-            Debug.Log(timer);
             timerBar.fillAmount = (timerBar.fillAmount - Time.deltaTime * 0.1f);
         }
         else
