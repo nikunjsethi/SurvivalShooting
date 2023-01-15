@@ -12,6 +12,8 @@ public class EnemyMovement : MonoBehaviour
     [Header("Audios")]
     public AudioSource _EnemyAudioSource;
     public AudioClip[] _enemyClips;
+
+
     public int hitCount;
     bool isAlive=true;
     // Start is called before the first frame update
@@ -64,19 +66,14 @@ public class EnemyMovement : MonoBehaviour
             zombie.SetBool("walk", false);
             zombie.SetBool("run", false);
             zombie.SetBool("injured", false);
+            zombie.SetBool("attack", false);
             zombie.SetBool("die", true);
             enemyNav.enabled = false;
             isAlive = false;
             _EnemyAudioSource.clip = _enemyClips[2];
             _EnemyAudioSource.Play();
-            StartCoroutine(Disappear());
-            this.enabled = false;                           //this line will stop the update function
+            this.enabled = false;   //this line will stop the update function
+            Destroy(gameObject, 5);
         }
-    }
-
-    IEnumerator Disappear()
-    {
-        yield return new WaitForSeconds(5f);
-        gameObject.SetActive(false);
     }
 }

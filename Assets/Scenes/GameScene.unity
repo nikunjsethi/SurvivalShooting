@@ -788,8 +788,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1db084f7ad3d7124cb3fc7ee0bb77824, type: 2}
+  m_sharedMaterial: {fileID: -6389670930220221934, guid: 1db084f7ad3d7124cb3fc7ee0bb77824,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1382,6 +1383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerBar: {fileID: 939516068}
+  timerWave: 1
+  enemyInstantiation: {fileID: 1925201074}
 --- !u!1 &1491172125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +1837,8 @@ MonoBehaviour:
   - {fileID: 1491172126}
   - {fileID: 1153658911}
   waveNo: {fileID: 873606208}
+  nextWave: 0
+  timer: {fileID: 1455448756}
 --- !u!1 &1989055889
 GameObject:
   m_ObjectHideFlags: 0

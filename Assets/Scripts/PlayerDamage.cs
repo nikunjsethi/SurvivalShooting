@@ -7,12 +7,22 @@ public class PlayerDamage : MonoBehaviour
     public Image healthHurt;
     public Image healthBar;
     public AudioSource _playerInjuredAudio;
-
+    bool wave1,wave2,wave3;
     private void Start()
     {
         healthHurt = GameObject.Find("InjuredEffect").GetComponent<Image>();
         healthBar = GameObject.Find("HealthBar").GetComponent<Image>();
         _playerInjuredAudio = GameObject.FindGameObjectWithTag("PlayerBody").GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        if(healthBar.fillAmount==0)
+        { 
+
+        }
+
+
     }
     private void OnTriggerEnter(Collider other)
     {

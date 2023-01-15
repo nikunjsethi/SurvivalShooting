@@ -7,6 +7,10 @@ public class Timer : MonoBehaviour
 {
     public Image timerBar;
     float timer;
+    public int timerWave = 1;
+
+    [Header("Other Scripts")]
+    [SerializeField] private EnemyInstantiation enemyInstantiation;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,8 @@ public class Timer : MonoBehaviour
         {
             timer = 10;
             timerBar.fillAmount = 1;
+            enemyInstantiation.nextWave = false;
+            timerWave++;
         }
         
     }
