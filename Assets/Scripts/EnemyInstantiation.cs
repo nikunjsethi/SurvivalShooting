@@ -103,36 +103,5 @@ public class EnemyInstantiation : MonoBehaviour
                 }
                 break;
         }
-        //if (timer.timerWave == 2)
-        //{
-        //    if (nextWave == false)
-        //    {
-        //        waveNo.text = "Wave 2";
-        //        for (int i = 0; i < 2; i++)
-        //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-        //        nextWave = true;
-        //    }
-        //}
-        //else if (timer.timerWave == 3)
-        //{
-        //    if (nextWave == false)
-        //    {
-        //        waveNo.text = "Wave 3";
-        //        for (int i = 0; i < 4; i++)
-        //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-        //        nextWave = true;
-        //    }
-        //}
-
-        //else if (timer.timerWave == 4)
-        //{
-        //    if (nextWave == false)
-        //    {
-        //        waveNo.text = "Wave 4";
-        //        for (int i = 0; i < 8; i++)
-        //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-        //        nextWave = true;
-        //    }
-        //}
     }
 }
