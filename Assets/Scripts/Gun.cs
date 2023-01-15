@@ -13,12 +13,6 @@ public class Gun : MonoBehaviour
     [Header("Scripts")]
     public PlayerMovement playerMovement;
     public EnemyMovement enemyMovement;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

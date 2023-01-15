@@ -57,7 +57,7 @@ public class EnemyInstantiation : MonoBehaviour
                 {
                     //m_ColorAdjust.active = false;
                     waveNo.text = "Wave 4";
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < 3; i++)
                         enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
                     nextWave = true;
                 }
@@ -67,7 +67,7 @@ public class EnemyInstantiation : MonoBehaviour
                 if (nextWave == false)
                 {
                     waveNo.text = "Wave 5";
-                    for (int i = 0; i < 5; i++)
+                    for (int i = 0; i < 4; i++)
                         enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
                     nextWave = true;
                 }
@@ -77,7 +77,7 @@ public class EnemyInstantiation : MonoBehaviour
                 if (nextWave == false)
                 {
                     waveNo.text = "Wave 6";
-                    for (int i = 0; i < 6; i++)
+                    for (int i = 0; i < 5; i++)
                         enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
                     nextWave = true;
                 }
@@ -87,7 +87,7 @@ public class EnemyInstantiation : MonoBehaviour
                 if (nextWave == false)
                 {
                     waveNo.text = "Wave 7";
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 0; i < 6; i++)
                         enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
                     nextWave = true;
                 }
@@ -97,7 +97,7 @@ public class EnemyInstantiation : MonoBehaviour
                 if (nextWave == false)
                 {
                     waveNo.text = "Wave 8";
-                    for (int i = 0; i < 8; i++)
+                    for (int i = 0; i < 7; i++)
                         enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
                     nextWave = true;
                 }
