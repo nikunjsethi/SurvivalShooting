@@ -54,60 +54,59 @@ public class EnemyInstantiation : MonoBehaviour
                 }
                 break;
 
-            case 4:
-                if (nextWave == false)
-                {
-                    waveNo.text = "Wave 4";
-                    for (int i = 0; i < 3; i++)
-                        enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-                    nextWave = true;
-                }
-                break;
+            //case 4:
+            //    if (nextWave == false)
+            //    {
+            //        waveNo.text = "Wave 4";
+            //        for (int i = 0; i < 3; i++)
+            //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
+            //        nextWave = true;
+            //    }
+            //    break;
 
-            case 5:
-                if (nextWave == false)
-                {
-                    waveNo.text = "Wave 5";
-                    for (int i = 0; i < 4; i++)
-                        enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-                    nextWave = true;
-                }
-                break;
+            //case 5:
+            //    if (nextWave == false)
+            //    {
+            //        waveNo.text = "Wave 5";
+            //        for (int i = 0; i < 4; i++)
+            //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
+            //        nextWave = true;
+            //    }
+            //    break;
 
-            case 6:
-                if (nextWave == false)
-                {
-                    waveNo.text = "Wave 6";
-                    for (int i = 0; i < 5; i++)
-                        enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-                    nextWave = true;
-                }
-                break;
+            //case 6:
+            //    if (nextWave == false)
+            //    {
+            //        waveNo.text = "Wave 6";
+            //        for (int i = 0; i < 5; i++)
+            //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
+            //        nextWave = true;
+            //    }
+            //    break;
 
-            case 7:
-                if (nextWave == false)
-                {
-                    waveNo.text = "Wave 7";
-                    for (int i = 0; i < 6; i++)
-                        enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-                    nextWave = true;
-                }
-                break;
+            //case 7:
+            //    if (nextWave == false)
+            //    {
+            //        waveNo.text = "Wave 7";
+            //        for (int i = 0; i < 6; i++)
+            //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
+            //        nextWave = true;
+            //    }
+            //    break;
 
-            case 8:
-                if (nextWave == false)
-                {
-                    waveNo.text = "Wave 8";
-                    for (int i = 0; i < 7; i++)
-                        enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
-                    nextWave = true;
-                }
-                break;
+            //case 8:
+            //    if (nextWave == false)
+            //    {
+            //        waveNo.text = "Wave 8";
+            //        for (int i = 0; i < 7; i++)
+            //            enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
+            //        nextWave = true;
+            //    }
+            //    break;
         }
         if(GameObject.FindGameObjectWithTag("Enemy")==null)
         {
             Player.SetActive(false);
-            Time.timeScale = 0;
             StartCoroutine(WeWon());
         }
     }
@@ -116,6 +115,7 @@ public class EnemyInstantiation : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         winText.text = "victory!";
+        Time.timeScale = 0;
         this.enabled = false;
     }
 

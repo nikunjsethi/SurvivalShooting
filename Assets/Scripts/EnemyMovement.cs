@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
         {
             enemyNav.SetDestination(player.position);
 
-            if (Vector3.Distance(player.position, gameObject.transform.position) > 5)
+            if (Vector3.Distance(player.position, gameObject.transform.position) > 8)
             {
                 zombie.SetBool("walk", true);
                 zombie.SetBool("run", false);

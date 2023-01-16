@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     {
         timer = 10f;
         timerBar.fillAmount = 1;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
