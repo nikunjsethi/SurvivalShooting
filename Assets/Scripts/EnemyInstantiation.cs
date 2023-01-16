@@ -8,9 +8,11 @@ using UnityEngine.Rendering.Universal;
 public class EnemyInstantiation : MonoBehaviour
 {
     public GameObject[] enemies;
+    public GameObject Player;
     GameObject[] enemyInstantiations = new GameObject[300];
     public Transform[] instantiatingPoints;
     public TextMeshProUGUI waveNo;
+    public TextMeshProUGUI winText;
     public bool nextWave = false;
     [Header("Other Scripts")]
     [SerializeField] private Timer timer;
@@ -55,7 +57,6 @@ public class EnemyInstantiation : MonoBehaviour
             case 4:
                 if (nextWave == false)
                 {
-                    //m_ColorAdjust.active = false;
                     waveNo.text = "Wave 4";
                     for (int i = 0; i < 3; i++)
                         enemyInstantiations[i] = Instantiate(enemies[Random.Range(0, enemies.Length)], instantiatingPoints[Random.Range(0, instantiatingPoints.Length)]);
@@ -103,5 +104,20 @@ public class EnemyInstantiation : MonoBehaviour
                 }
                 break;
         }
+        if(GameObject.FindGameObjectWithTag("Enemy")==null)
+        {
+            Player.SetActive(false);
+            Time.timeScale = 0;
+            StartCoroutine(WeWon());
+        }
     }
+
+    IEnumerator WeWon()
+    {
+        yield return new WaitForSeconds(3f);
+        winText.text = "victory!";
+        this.enabled = false;
+    }
+
+
 }

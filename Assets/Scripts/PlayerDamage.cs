@@ -43,7 +43,6 @@ public class PlayerDamage : MonoBehaviour
                 gameFinished = true;
                 healthHurt.enabled = true;
                 Player.SetActive(false);
-                Debug.Log("Died");
                 Time.timeScale = 0;
                 this.enabled = false;
             }
